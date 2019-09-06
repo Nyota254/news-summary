@@ -1,0 +1,6 @@
+#excludes the python compiled files 
+*.pyc
+#Excludes the virtual environment
+virtualenv
+#Excludes cache folder
+__pycache__
