@@ -1,1 +1,35 @@
 {% extends 'base.html' %}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <ol>
+            {% for article in articles %}
+            <div class="container-fluid">
+        <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="{{ article.image}}" alt="article images" style="height: 200px;width: 200px;">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Article Description: {{ article.description }}</h5>
+                      <p class="card-text">Date Created: {{ article.timecreated }}</p>
+                      <a href="{{ article.articlelink }}" class="btn btn-primary">View the artcle</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <li><img src="{{ article.image}}" alt="article images" style="height: 200px;width: 200px;"></li> -->
+            {% endfor %}
+        </ol>
+
+    </div>
+
+{% endblock %}

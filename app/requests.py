@@ -40,9 +40,44 @@ def process_results(sources_list):
         description = source_item.get('description')
         category = source_item.get('category')
         url = source_item.get('url')
+        id = source_item.get('id')
 
-        source_object = News_source(name,description,category,url)
+        source_object = News_source(name,description,category,url,id)
         source_list.append(source_object)
     
     return source_list
 
+def get_articles(newssource):
+    '''
+    Method to get articles from the apis
+    '''
+    get_articles_url = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'.format(newssource,api_key)    
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+
+        articles_results = None
+
+        if get_articles_response ['articles']:
+            articles_results_list = get_articles_response['articles']
+            articles_results = process_articles(articles_results_list)
+
+    return articles_results
+
+def process_articles(article_list):
+    '''
+    Method to process articles list and transform them into objects
+    '''
+    articles_list = []
+    for article in article_list:
+        #source = article.get(['sources']['id'])
+        image = article.get('urlToImage')
+        description = article.get('description')
+        timecreated = article.get('publishedAt')
+        articlelink = article.get('url')
+
+        article_object = News_article(image,description,timecreated,articlelink)
+        articles_list.append(article_object)
+        
+    return articles_list
