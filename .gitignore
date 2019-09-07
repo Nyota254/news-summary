@@ -4,3 +4,5 @@
 virtualenv
 #Excludes cache folder
 __pycache__
+#Ignore vscode json
+.vscode
