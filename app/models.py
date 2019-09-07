@@ -2,7 +2,7 @@ class News_source:
     '''
     Class for instantiating Source objects
     '''
-    def __init__(self,name,description,category,url):
+    def __init__(self,name,description,category,url,id):
         '''
         Method for instantiating the movie variables
         '''
@@ -10,6 +10,7 @@ class News_source:
         self.description = description
         self.category =category
         self.url = url
+        self.id = id
 
 class News_article:
     '''
@@ -20,6 +21,7 @@ class News_article:
         '''
         Method for instantiating article variables
         '''
+        #self.source = source
         self.image = image
         self.description = description
         self.timecreated = timecreated
