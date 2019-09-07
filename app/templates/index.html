@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <h1>NEWS SOURCES</h1>
+        {% for source in sources %}
+        <div class="container-fluid">
+        <div class="card" style="width: 18rem;">
+            <img src="{{url_for('static',filename='images/news.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">News Source: {{ source.name }}</h5>
+              <p class="card-text">About The Source: {{ source.description }}</p>
+              <p class="card-text">News Category: {{ source.category }}</p>
+              <a href="{{ source.url }}" class="btn btn-primary">Visit The Website</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
 {% endblock %}
 
