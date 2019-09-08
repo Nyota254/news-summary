@@ -16,9 +16,9 @@
         <div class="card">
           <!-- <img src="{{url_for('static',filename='images/news.png')}}" class="card-img-top" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title"><strong>Source: {{ source.name }}</strong></h5>
-            <p class="card-text">About The Source: {{ source.description }}</p>
-            <p class="card-text">News Category: {{ source.category }} </p>
+            <h5 class="card-title" style="font-size: 26px;"><strong>Source: {{ source.name }}</strong></h5>
+            <p class="card-text" style="font-size: 24px;">About The Source: {{ source.description }}</p>
+            <p class="card-text" style="font-size: 24px;">News Category: {{ source.category }} </p>
             <a href="{{ source.url }}" class="btn btn-primary">Visit The Website</a>
             <a href="articles/{{ source.id }}" class="btn btn-primary">View Articles From The Source</a>
           </div>
