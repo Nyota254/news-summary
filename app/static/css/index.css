@@ -2,11 +2,12 @@
     background-color: #fffdd0;
 }
 img {
-    height: 286px;
-    width: 180px;
+    height: 200px;
+    width: 200px;
 }
 body {
     background-color: #fffdd0;
+    font-family: 'Bad Script', cursive;
 }
 .img-sizing {
     height: 50px;
