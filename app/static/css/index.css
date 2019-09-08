@@ -8,6 +8,7 @@ img {
 body {
     background-color: #fffdd0;
     font-family: 'Bad Script', cursive;
+    font-size: 24px;
 }
 .img-sizing {
     height: 50px;
