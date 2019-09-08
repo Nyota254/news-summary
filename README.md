@@ -1,6 +1,9 @@
 # News Highlight
 #### Web app that shows various news sources and shows a user articles written from the sources, 8-Sep-2019
 #### By **Kingecha Kevin Nyota**
+## Link to live site
+https://news-summary.herokuapp.com
+
 ## Description
 This is a web based site that takes various news sources and displays them to a user. a user can then navigate to view the various articles written by the site.The main reoson behind its creation is to allow users to catch up on the latest news
 ## User Stories
