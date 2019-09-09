@@ -6,12 +6,21 @@ img {
     width: 200px;
 }
 body {
-    background-color: #fffdd0;
+    /* background-color: #fffdd0; */
     /* font-family: 'Bad Script', cursive; */
-    /* background-image: url(../images/bg1.jpg); */
+    background-attachment: fixed;
+    background-image: url(../images/bg2.png);
     font-size: 24px;
+    background-size: cover;
 }
 .img-sizing {
     height: 50px;
     width: 50px;
+}
+.panel {
+    opacity: 0.8;
+}
+.bg-custom {
+    background-color: white;
+    opacity: 0.9;
 }

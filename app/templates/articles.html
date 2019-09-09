@@ -10,8 +10,10 @@
     <div class="container-fluid">
         <div class="row">
             {% for article in articles %}
+            
             <div class="col-md-6">
         <div class="card mb-3" style="max-width: 540px;">
+            <div class="bg-custom">
                   <div class="col-md-5">
                     <img src="{{ article.image}}" alt="article images" style="height: 200px;width: 200px;">
                   </div>
@@ -24,7 +26,7 @@
                   </div>
                 
             </div>
-          </div><br><br>
+          </div><br><br></div>
 
             <!-- <li><img src="{{ article.image}}" alt="article images" style="height: 200px;width: 200px;"></li> -->
             {% endfor %}
