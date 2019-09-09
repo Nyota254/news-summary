@@ -12,6 +12,7 @@ body {
     background-image: url(../images/bg2.png);
     font-size: 24px;
     background-size: cover;
+    font-family: 'Karla', sans-serif;
 }
 .img-sizing {
     height: 50px;
