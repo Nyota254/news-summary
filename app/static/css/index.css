@@ -1,13 +1,13 @@
-.card-body{
+/* .card-body{
     background-color: #fffdd0;
-}
+} */
 img {
     height: 200px;
     width: 200px;
 }
 body {
-    background-color: #fffdd0;
-    font-family: 'Bad Script', cursive;
+    /* background-color: #fffdd0; */
+    /* font-family: 'Bad Script', cursive; */
     font-size: 24px;
 }
 .img-sizing {

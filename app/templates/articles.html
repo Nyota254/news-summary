@@ -3,34 +3,33 @@
 {% block styles%}
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet"> -->
 {% endblock %}
 
 {% block content %}
     <div class="container-fluid">
-        <ol>
+        <div class="row">
             {% for article in articles %}
-            <div class="container-fluid">
+            <div class="col-md-6">
         <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col-md-5">
                     <img src="{{ article.image}}" alt="article images" style="height: 200px;width: 200px;">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-7">
                     <div class="card-body">
-                      <h5 class="card-title" style="font-size: 24px;">Article Description: {{ article.description }}</h5>
+                      <h5 class="card-title" style="font-size: 24px;">Article Description: {{ article.description | truncate(100)}}</h5>
                       <p class="card-text" style="font-size: 24px;">Date Created: {{ article.timecreated }}</p>
                       <a href="{{ article.articlelink }}" class="btn btn-primary">View the artcle</a>
                     </div>
                   </div>
-                </div>
-              </div>
+                
             </div>
+          </div><br><br>
 
             <!-- <li><img src="{{ article.image}}" alt="article images" style="height: 200px;width: 200px;"></li> -->
             {% endfor %}
-        </ol>
 
     </div>
+  </div>
 
 {% endblock %}

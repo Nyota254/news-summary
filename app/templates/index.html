@@ -3,21 +3,21 @@
 {% block styles%}
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-<link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet"> -->
 {% endblock %}
 
 {% block content %}
-<h1>NEWS SOURCES</h1>
-{% for source in sources %}
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3">
+<div class="row">
+<h1 styles="text-alighn: center;">NEWS SOURCES</h1>
+{% for source in sources %}
+    <div class="col-md-4">
       <div class="card-deck">
         <div class="card">
           <!-- <img src="{{url_for('static',filename='images/news.png')}}" class="card-img-top" alt="..."> -->
           <div class="card-body">
-            <h5 class="card-title" style="font-size: 26px;"><strong>Source: {{ source.name }}</strong></h5>
-            <p class="card-text" style="font-size: 24px;">About The Source: {{ source.description }}</p>
+            <h5 class="card-header" style="font-size: 26px;"><strong>Source: {{ source.name }}</strong></h5>
+            <p class="card-text" style="font-size: 24px;">About The Source: {{ source.description | truncate(40) }}</p>
             <p class="card-text" style="font-size: 24px;">News Category: {{ source.category }} </p>
             <a href="{{ source.url }}" class="btn btn-primary">Visit The Website</a>
             <a href="articles/{{ source.id }}" class="btn btn-primary">View Articles From The Source</a>
@@ -25,8 +25,6 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
 <!-- <div class="container-fluid">
         <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
@@ -45,4 +43,6 @@
               </div>
             </div> -->
 {% endfor %}
+</div>
+</div>
 {% endblock %}
